@@ -6,7 +6,7 @@ namespace ScheduleSync
 {
     public class Pessoa
     {
-        public string Nome { get; set; }
+        public string Nome { get; }
 
         public Pessoa(string nome)
         {

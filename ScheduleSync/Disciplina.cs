@@ -16,9 +16,9 @@ namespace ScheduleSync
         {
             Nome = nome;
             Periodo = periodo;
-            HorarioDisciplina = new List<Horario>();
-            ProfessorResponsavel = new List<Professor>();
-            AlunosMatriculados = new List<Aluno>();
+            HorarioDisciplina = [];
+            ProfessorResponsavel = [];
+            AlunosMatriculados = [];
             universidade.DisciplinasOfertadas.Add(this);
         }
 

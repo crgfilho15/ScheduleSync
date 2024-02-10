@@ -11,7 +11,7 @@ namespace ScheduleSync
         {
             Console.WriteLine("Seja Bem-Vindo(a) ao ScheduleSync!");
 
-            Universidade cefet = new Universidade("CEFET-MG");
+            var cefet = new Universidade("CEFET-MG");
             Aluno carlos = new Aluno("Carlos", "20183009667", cefet);
             Aluno mariana = new Aluno("Mariana", "20193009667", cefet);
             Professor marcus = new Professor("Marcus", cefet);
@@ -36,32 +36,15 @@ namespace ScheduleSync
             {
                 segundaM12 = new Horario(2, "M", 12);
                 prog1.CadastrarHorario(segundaM12);
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            try
-            {
+                
                 segundaM34 = new Horario(2, "M", 34);
                 calculo1.CadastrarHorario(segundaM34);
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            try
-            {
+            
                 quartaN1 = new Horario(4, "N", 1);
                 prog2.CadastrarHorario(quartaN1);
-            } catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            try
-            {
-                quintaT56 = new Horario(5, "T", 56);
+            
+                quintaT56 = new Horario(5, "t", 56);
+                Console.WriteLine(quintaT56);
                 estrutura.CadastrarHorario(quintaT56);
             } catch (Exception e)
             {
