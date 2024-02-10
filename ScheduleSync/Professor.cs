@@ -10,8 +10,7 @@ namespace ScheduleSync
 
         public Professor(string nome, Universidade universidade) : base(nome)
         {
-            Nome = nome;
-            DisciplinasLecionadas = new List<Disciplina>();
+            DisciplinasLecionadas = [];
             universidade.ProfessoresAtivos.Add(this);
         }
 
@@ -20,7 +19,7 @@ namespace ScheduleSync
             foreach (var disciplina in DisciplinasLecionadas)
             {
                 string professores = string.Join("/", disciplina.ProfessorResponsavel.Select(professor => professor.Nome));
-                Console.WriteLine(disciplina.Nome + " - " + professores);
+                Console.WriteLine($"{disciplina.Nome} - {professores}");
             }
         }
 

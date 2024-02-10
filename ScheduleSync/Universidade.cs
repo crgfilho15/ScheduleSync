@@ -14,9 +14,9 @@ namespace ScheduleSync
         public Universidade(string nomeUniversidade)
         {
             NomeUniversidade = nomeUniversidade;
-            AlunosMatriculados = new List<Aluno>();
-            DisciplinasOfertadas = new List<Disciplina>();
-            ProfessoresAtivos = new List<Professor>();
+            AlunosMatriculados = [];
+            DisciplinasOfertadas = [];
+            ProfessoresAtivos = [];
         }
 
         public void ListarAlunosMatriculados()
@@ -24,7 +24,7 @@ namespace ScheduleSync
             Console.WriteLine("\n*** Alunos Matriculados ***");
             foreach (var aluno in AlunosMatriculados)
             {
-                Console.WriteLine(aluno.Nome + " " + aluno.Matricula);
+                Console.WriteLine($"{aluno.Nome} {aluno.Matricula}");
             }
         }
 
@@ -35,8 +35,8 @@ namespace ScheduleSync
             {
                 string horarios = string.Join("/", disciplina.HorarioDisciplina);
                 string professores = string.Join("/", disciplina.ProfessorResponsavel.Select(professor => professor.Nome));
-                horarios = horarios == "" ? "a definir" : horarios;
-                professores = professores == "" ? "a definir" : professores;
+                horarios = string.IsNullOrEmpty(horarios) ? "a definir" : horarios;
+                professores = string.IsNullOrEmpty(professores) ? "a definir" : professores;
                 Console.WriteLine($"{disciplina.Nome} - {disciplina.Periodo}º Período - Horário(s) {horarios} - Professor(es) {professores}");
                 //Console.WriteLine($"{disciplina.Nome} - {horarios}");
             }
@@ -60,12 +60,12 @@ namespace ScheduleSync
                 Console.WriteLine("Professor(es): ");
                 foreach (var professor in disciplina.ProfessorResponsavel)
                 {
-                    Console.WriteLine("- " + professor.Nome);
+                    Console.WriteLine($"- {professor.Nome}");
                 }
                 Console.WriteLine("Aluno(s): ");
                 foreach (var aluno in disciplina.AlunosMatriculados)
                 {
-                    Console.WriteLine("- " + aluno.Nome);
+                    Console.WriteLine($"- {aluno.Nome}");
                 }
             }
         }

@@ -15,7 +15,9 @@ namespace ScheduleSync
             {
                 throw new ArgumentException("O dia da semana deve ser um valor inteiro entre 2 e 6.");
             }
-            if (turno != "M" && turno != "T" && turno != "N")
+            if (!turno.Equals("M", StringComparison.InvariantCultureIgnoreCase) 
+                && !turno.Equals("T", StringComparison.InvariantCultureIgnoreCase)
+                && !turno.Equals("N", StringComparison.InvariantCultureIgnoreCase))
             {
                 throw new ArgumentException("O turno deve ser uma letra: M, T ou N.");
             }
@@ -25,7 +27,7 @@ namespace ScheduleSync
             }
 
             DiaDaSemana = diaDaSemana;
-            Turno = turno.ToUpper();
+            Turno = turno;
             NumeroHorario = numeroHorario;
         }
 

@@ -10,9 +10,8 @@ namespace ScheduleSync
 
         public Aluno(string nome, string matricula, Universidade universidade) : base(nome)
         {
-            Nome = nome;
             Matricula = matricula;
-            DisciplinasMatriculadas = new List<Disciplina>();
+            DisciplinasMatriculadas = [];
             universidade.AlunosMatriculados.Add(this);
         }
 
