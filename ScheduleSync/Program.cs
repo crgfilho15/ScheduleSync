@@ -52,10 +52,10 @@ namespace ScheduleSync
             }
 
             cefet.TrocarHorario(calculo1, segundaM12);
-           /* cefet.ListarAlunosMatriculados();
+            cefet.ListarAlunosMatriculados();
             cefet.ListarDisciplinasOfertadas();
             cefet.ListarProfessoresAtivos();
-            cefet.ListarTurmas();*/
+            cefet.ListarTurmas();
         }
     }
 }
