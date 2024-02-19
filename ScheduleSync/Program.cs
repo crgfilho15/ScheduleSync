@@ -51,11 +51,12 @@ namespace ScheduleSync
                 Console.WriteLine(e.Message);
             }
 
-            cefet.TrocarHorario(calculo1, segundaM12);
+            //cefet.TrocarHorario(calculo1, segundaM12);
             cefet.ListarAlunosMatriculados();
             cefet.ListarDisciplinasOfertadas();
             cefet.ListarProfessoresAtivos();
             cefet.ListarTurmas();
+            Console.ReadLine();
         }
     }
 }

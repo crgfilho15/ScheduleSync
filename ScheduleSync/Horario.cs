@@ -27,7 +27,7 @@ namespace ScheduleSync
             }
 
             DiaDaSemana = diaDaSemana;
-            Turno = turno;
+            Turno = turno.ToUpper();
             NumeroHorario = numeroHorario;
         }
 
