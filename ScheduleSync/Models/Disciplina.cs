@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace ScheduleSync
+namespace ScheduleSync.Models
 {
     public class Disciplina
     {

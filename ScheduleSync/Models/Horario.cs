@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ScheduleSync
+namespace ScheduleSync.Models
 {
     public class Horario
     {
@@ -15,7 +15,7 @@ namespace ScheduleSync
             {
                 throw new ArgumentException("O dia da semana deve ser um valor inteiro entre 2 e 6.");
             }
-            if (!turno.Equals("M", StringComparison.InvariantCultureIgnoreCase) 
+            if (!turno.Equals("M", StringComparison.InvariantCultureIgnoreCase)
                 && !turno.Equals("T", StringComparison.InvariantCultureIgnoreCase)
                 && !turno.Equals("N", StringComparison.InvariantCultureIgnoreCase))
             {

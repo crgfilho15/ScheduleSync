@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ScheduleSync
+namespace ScheduleSync.Models
 {
     public class Pessoa
     {

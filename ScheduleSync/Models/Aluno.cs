@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ScheduleSync
+namespace ScheduleSync.Models
 {
     public class Aluno : Pessoa
     {

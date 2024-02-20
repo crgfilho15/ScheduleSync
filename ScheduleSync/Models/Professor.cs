@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ScheduleSync
+namespace ScheduleSync.Models
 {
     public class Professor : Pessoa
     {
