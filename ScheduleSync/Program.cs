@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
+using ScheduleSync.Models;
+using ScheduleSync.Services;
 
 namespace ScheduleSync
 {
@@ -10,6 +12,10 @@ namespace ScheduleSync
         static void Main(string[] args)
         {
             Console.WriteLine("Seja Bem-Vindo(a) ao ScheduleSync!");
+
+            // Instancia o servico do professos
+
+            ServiceProfessor serviceProfessor = new();
 
             var cefet = new Universidade("CEFET-MG");
             Aluno carlos = new Aluno("Carlos", "20183009667", cefet);
@@ -21,8 +27,12 @@ namespace ScheduleSync
             Disciplina prog2 = new Disciplina("Programação 2", 2, cefet);
             Disciplina estrutura = new Disciplina("Estrutura de Dados", 3, cefet);
 
+            Professor emmanuel = new Professor("Emmanuel", cefet);
             marcus.AssumirDisciplina(prog1);
             gabriela.AssumirDisciplina(prog2);
+
+            serviceProfessor.AssumirDisciplina(emmanuel,estrutura);
+
             //prog1.AtribuirProfessor(marcus);
             //prog2.AtribuirProfessor(gabriela);
             carlos.MatricularEmDisciplina(estrutura);
@@ -44,7 +54,7 @@ namespace ScheduleSync
                 prog2.CadastrarHorario(quartaN1);
             
                 quintaT56 = new Horario(5, "t", 56);
-                Console.WriteLine(quintaT56);
+                //Console.WriteLine(quintaT56);
                 estrutura.CadastrarHorario(quintaT56);
             } catch (Exception e)
             {
